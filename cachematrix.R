@@ -5,7 +5,7 @@ makeCacheMatrix <- function(x = matrix()) {
   # initialize the m to NULL during the first call to makeCacheMatrix
   # this is needed because getinv() is called immediately after
   # the makeCacheMatrix funciton is constructed, without a call to setinv()
-  # we know we must first calculate the inverse in cacheSolve.  
+  # first have to calculate the inverse in cacheSolve.  
   m <- NULL
   set <- function(y) {
     # use the <<- operator to set the value of x
